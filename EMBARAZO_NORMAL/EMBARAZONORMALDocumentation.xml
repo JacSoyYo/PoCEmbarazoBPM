@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.6.0.15.53" fileRevision="20110706"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="EMBARAZONORMAL">
+        <topicDocumentations>
+            <topicDocumentation name="EMBARAZONORMAL">
+                <labels>
+                    <label locale="en">EMBARAZO_NORMAL</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">Misión: “Atención integral, continua y coordinada entre los profesionales de Atención Primaria y A. Especializada de las pacientes que cursan con un Embarazo Normal”</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="SUBPROCESS5000673085150">
+                <labels>
+                    <label locale="en">Captación Embarazada</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5000695677839">
+                <labels>
+                    <label locale="en">InicioPA</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5000707062560">
+                <labels>
+                    <label locale="en">FinPA</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT5000673086777">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT5000673086762">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="sf23"/>
+            <topicDocumentation name="sf25"/>
+            <topicDocumentation name="sf26"/>
+            <topicDocumentation name="SUBPROCESS5001645027060">
+                <labels>
+                    <label locale="en">Primera consulta en AP</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5001672116954">
+                <labels>
+                    <label locale="en">InicioPA</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5001677989753">
+                <labels>
+                    <label locale="en">FinPA</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT5001645326671">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT5001645326775">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="sf42"/>
+            <topicDocumentation name="sf49"/>
+            <topicDocumentation name="sf50"/>
+            <topicDocumentation name="START_EVENT5000367253525">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT5000367253659">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="SUBPROCESS5001819174431">
+                <labels>
+                    <label locale="en">Analítica primer trimestre</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT5001819295195">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT5001819295346">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5001831489214">
+                <labels>
+                    <label locale="en">InicioPA</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5001834260563">
+                <labels>
+                    <label locale="en">FinPA</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf27"/>
+            <topicDocumentation name="sf32"/>
+            <topicDocumentation name="sf33"/>
+            <topicDocumentation name="sf7"/>
+            <topicDocumentation name="sf24"/>
+            <topicDocumentation name="sf26"/>
+            <topicDocumentation name="sf35"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

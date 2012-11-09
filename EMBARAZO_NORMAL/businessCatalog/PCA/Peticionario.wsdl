@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="11.1.1.6.0.15.53" build="15.53" fullName="PCA.Peticionario" modifiers="268435456"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<definitions targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/PCA/Peticionario.Interface" name="Peticionario" xmlns:oj="http://xmlns.sacyl.es/hurh/bpmn/general"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns="http://schemas.xmlsoap.org/wsdl/"  xmlns:tns="http://xmlns.oracle.com/bpm/bpmobject/PCA/Peticionario.Interface"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xsd:annotation>
+        <xsd:documentation>
+            <bpmo:documentable>
+                <bpmo:description>
+                    CIAS origen del proceso
+                </bpmo:description>
+            </bpmo:documentable>
+        </xsd:documentation>
+    </xsd:annotation>
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://xmlns.sacyl.es/hurh/bpmn/general" schemaLocation="../../xsd/hurh-bpm-general.xsd"/>
+        </xsd:schema>
+    </types>
+    <portType name="PeticionarioPortType"/>
+    <binding name="PeticionarioPortTypeBinding" type="tns:PeticionarioPortType">
+        <bpmo:binding type="oj:PeticionarioType"/>
+    </binding>
+</definitions>

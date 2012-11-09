@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.6.0.15.53" fileRevision="20110706"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="GESTIONCITASEMBARAZO">
+        <topicDocumentations>
+            <topicDocumentation name="GESTIONCITASEMBARAZO">
+                <labels>
+                    <label locale="en">GESTION_CITAS_EMBARAZO</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">Este proceso se encarga de generar citas dentro del contexto del proceso principal de "Embarazo Normal" si hay que reutilizar un servicio genérico se resolvera internamente. No se espera a la cita, en principio sólo interesa tener ACK del sistema invocado</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT5000782933113">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT5000782933296">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="sf32"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

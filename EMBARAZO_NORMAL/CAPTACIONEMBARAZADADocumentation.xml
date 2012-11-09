@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.6.0.15.53" fileRevision="20110706"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="CAPTACIONEMBARAZADA">
+        <topicDocumentations>
+            <topicDocumentation name="CAPTACIONEMBARAZADA">
+                <labels>
+                    <label locale="en">CAPTACION_EMBARAZADA</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">Si se ha llegado aquí es porque el facultativo considera que hay embarazo y es normal</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT500066765868">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT5000667658663">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="sf21"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

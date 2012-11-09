@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.6.0.15.53" fileRevision="20110706"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="PRIMERACONSULTAAP">
+        <topicDocumentations>
+            <topicDocumentation name="PRIMERACONSULTAAP">
+                <labels>
+                    <label locale="en">PRIMERA_CONSULTA_AP</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">Apertura de Ha Clínica e inicio del seguimiento del embarazo normal</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT5001667970612">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT5001667970724">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5002183755434">
+                <labels>
+                    <label locale="en">Cumplimentación HC</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">La matrona procede a la cumplimentación de la historia clínica de la paciente y rellena la Cartilla de Salud de la Embarazada,
+donde recogerá: 1- la edad maternal, 2- los antecedentes generales, familiares y personales, 3- los antecedentes
+ginecológicos y obstétricos, 4- los hábitos tóxicos, 5.- alergias y vacunas, 6- los factores psicosociales, 7.-riesgos laborales.</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5002186951821">
+                <labels>
+                    <label locale="en">Exploración física</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">La matrona realiza una exploración física de la paciente que incluye: 1- talla, peso e IMC, 2- tensión arterial, 3- auscultación
+cardio-pulmonar (a realizar por el médico), 4- exploración abdominal, 5- valoración de posible insuficiencia venosa en
+miembros inferiores.</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5002195823857">
+                <labels>
+                    <label locale="en">Información aspectos sanitarios</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">La matrona informa a la paciente de aspectos de educación sanitaria en relación con los hábitos dietéticos, el consumo de tabaco, alcohol y otras drogas, y los síntomas de consulta urgente.</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5002202039034">
+                <labels>
+                    <label locale="en">Información sobre el cribado de Cromosomopatías</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">La matrona informa a la paciente sobre el Cribado Combinado de Cromosomopatías y la posibilidad de realizarse una amniocentesis en función de sus resultados</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5002299587973">
+                <labels>
+                    <label locale="en">Informe para primera consulta de ecografía</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">La matrona cumplimentará el impreso correspondiente con el detalle de los datos personales y de historia clínica que figuran en la primera parte del formulario, y se lo entregará a la paciente, que deberá llevarlo consigo a la primera consulta de ecografía.</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5002319511164">
+                <labels>
+                    <label locale="en">Control prescripción ácido fólico</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY500234549836">
+                <labels>
+                    <label locale="en">Valoración administración ioduro de potasio</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">a matrona valora de manera personalizada la necesidad de administración de ioduro potásico, según recomendaciones de la SEGO, para prevención de déficit de yodo (excepto en las pacientes que tengan patología tiroidea previa). En caso de necesitarlo, contactará con el médico de familia para que valore su prescripción y/o derivación a endocrinología.</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5002352867234">
+                <labels>
+                    <label locale="en">Solicitud analítica primer trimestre</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">Se solicita la analítica del 1o trimestre para ser realizada en el Centro de Salud en los días posteriores. Esta analítica incluirá:
+Perfil de embarazo (Hemograma, Bioquímica, Serología, Metabolismo de Hierro, Grupo RH y Coombs indirecto)
+Coagulación
+Sistemático de orina, sedimento y urocultivo
+Test de O ́Sullivan en pacientes de alto riesgo para diabetes gestacional (ver pág. 67)
+</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5007867761392">
+                <labels>
+                    <label locale="en">Solicitud de citas</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">Además la matrona solicita:
+- Cita para las ecografías (señalando fecha última regla –FUR-)
+- Cita para la 1a Consulta de A.Especializada (semana 15-16)
+- Cita para la 2a y 3a Consulta de A. Primaria (semanas 20-21 y 31-32 respectivamente)
+- Cita para salud bucodental (en 2o trimeste)</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY5007879252535">
+                <labels>
+                    <label locale="en">Valoración del riesgo del embarazo</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">La matrona ya puede clasificar el embarazo como de alto riesgo en esta consulta, si la paciente padece alguno de los
+criterios de alto riesgo que figuran en el Anexo VII (anexo VII-a). En estos casos la paciente sale del circuito de embarazo
+normal, y pasa al de alto riesgo. Desde A. Primaria, se gestiona la cita para la consulta de alto riesgo.</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="CATCH_INTERMEDIATE_EVENT5009260256928">
+                <labels>
+                    <label locale="en">Espera informe Primera Consulta AP</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf47"/>
+            <topicDocumentation name="sf59"/>
+            <topicDocumentation name="sf60"/>
+            <topicDocumentation name="sf61"/>
+            <topicDocumentation name="sf62"/>
+            <topicDocumentation name="sf63"/>
+            <topicDocumentation name="sf64"/>
+            <topicDocumentation name="sf65"/>
+            <topicDocumentation name="sf66"/>
+            <topicDocumentation name="sf70"/>
+            <topicDocumentation name="sf71"/>
+            <topicDocumentation name="sf73"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

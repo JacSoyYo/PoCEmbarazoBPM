@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns0="http://xmlns.sacyl.es/hurh/bpmn/pca/embarazo"
+            targetNamespace="http://xmlns.sacyl.es/hurh/bpmn/pca/embarazo"
+            elementFormDefault="qualified"
+            xmlns:ns1="http://xmlns.sacyl.es/hurh/bpmn/general">
+  <xsd:import schemaLocation="hurh-bpm-general.xsd"
+              namespace="http://xmlns.sacyl.es/hurh/bpmn/general"/>
+  <xsd:element name="cartillaSaludEmbarazada"
+               type="ns0:CartillaSaludEmbarazadaType">
+    <xsd:annotation>
+      <xsd:documentation>
+        A sample element
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="exploracionPrimeraConsultaAP"
+               type="ns0:ExploracionPrimeraConsultaAPType"/>
+  <xsd:complexType name="CartillaSaludEmbarazadaType">
+    <xsd:sequence>
+      <xsd:element name="edadMaternal" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="antecedentesGPF"
+                   type="ns1:AntecedentesGPFType" minOccurs="0"/>
+      <xsd:element name="antecedentesGO"
+                   type="ns1:AntecedentesGOType" minOccurs="0"/>
+      <xsd:element name="habitosToxicos" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="alergias" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="vacunas" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="factoresPsicosociales" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="riesgosLaborales" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ExploracionPrimeraConsultaAPType">
+    <xsd:sequence>
+      <xsd:element name="talla" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="peso" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="IMC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="tensionArterial" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="auscultacionCP" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="exploracionAbdominal" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="valoracionIVMI" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>
+            Insuficiencia Venosa Miembros Inferiores
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResumenPrimeraConsultaAP">
+    <xsd:sequence>
+      <xsd:element name="edadGestacional" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="peso" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="tensionArterial" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="fechaUltRegla" minOccurs="0" type="xsd:dateTime"/>
+      <xsd:element name="fechaProbableParto" minOccurs="0" type="xsd:dateTime"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmbarazoNormalStartType">
+    <xsd:sequence>
+      <xsd:element name="idPC" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="cip" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="peticionario" minOccurs="0"
+                   type="ns1:PeticionarioType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PrimeraConsultaAPStartType">
+    <xsd:sequence>
+      <xsd:element name="idPC" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="cip" minOccurs="0" type="xsd:string"/>
+      <xsd:element name="peticionario" minOccurs="0"
+                   type="ns1:PeticionarioType"/>
+      <xsd:element name="exploracion" minOccurs="0"
+                   type="ns0:ExploracionPrimeraConsultaAPType"/>
+      <xsd:element name="cartillaSaludEmbarazada" minOccurs="0"
+                   type="ns0:CartillaSaludEmbarazadaType"/>
+      <xsd:element name="resumen" minOccurs="0"
+                   type="ns0:ResumenPrimeraConsultaAP"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

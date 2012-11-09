@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions fileRevision="20110706" version="11.1.1.6.0.15.53" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:ns2="http://www.omg.org/spec/DD/20100524/DI" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:ns4="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ns3="http://www.omg.org/spec/DD/20100524/DC" xmlns:ns5="http://xmlns.oracle.com/bpm/OracleExtensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <process processType="Public" isExecutable="true" name="EMBARAZO_NORMAL" id="EMBARAZONORMAL">
+        <extensionElements>
+            <ns5:OracleExtensions>
+                <ns5:FeatureSet>
+                    <ns5:BooleanFeature value="false" name="atomic"/>
+                    <ns5:BooleanFeature value="false" name="instanceScreenflow"/>
+                    <ns5:BooleanFeature value="true" name="relative-coordinates"/>
+                    <ns5:BooleanFeature value="true" name="sharePredefineVariables"/>
+                    <ns5:BooleanFeature value="true" name="suspendInstanceOnDataAssociationError"/>
+                    <ns5:StringFeature value="" name="ANALYTICS_VIEW_IDENTIFIER"/>
+                    <ns5:StringFeature value="Grupo de trabajo (Dr. Gonzalo Quesada)" name="AUTHOR"/>
+                    <ns5:StringFeature value="default" name="GreedyExecutionMode"/>
+                    <ns5:StringFeature value="http://xmlns.sacyl.es/hurh/bpmn/pca/EMBARAZONORMAL" name="NAMESPACE"/>
+                    <ns5:StringFeature value="PROJECT_DEFAULT" name="generatesEvents"/>
+                    <ns5:StringFeature value="HORIZONTAL_LAYOUT" name="process-layout"/>
+                    <ns5:StringFeature value="1.0" name="scale"/>
+                    <ns5:StringFeature value="REGULAR" name="sealType"/>
+                </ns5:FeatureSet>
+                <ns5:Conversations>
+                    <ns5:Conversation id="CONVERSATION50003672537" type="define_interface">
+                        <ns5:DefineInterfaceConversationDefinition exposeSOAPService="true"/>
+                    </ns5:Conversation>
+                    <ns5:Conversation id="CONVERSATION50007111520" type="process_call">
+                        <ns5:ProcessCallConversationDefinition process="CAPTACIONEMBARAZADA"/>
+                    </ns5:Conversation>
+                    <ns5:Conversation id="CONVERSATION50016808671" type="process_call">
+                        <ns5:ProcessCallConversationDefinition process="PRIMERACONSULTAAP"/>
+                    </ns5:Conversation>
+                    <ns5:Conversation id="CONVERSATION50018742391" type="process_call">
+                        <ns5:ProcessCallConversationDefinition process="ANALITICAPRIMERTRIMESTRE"/>
+                    </ns5:Conversation>
+                </ns5:Conversations>
+            </ns5:OracleExtensions>
+        </extensionElements>
+        <laneSet>
+            <lane name="AutomaticHandler" id="lane0">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes backgroundColor="-1761607681">
+                            <ns5:Position x="0" y="0"/>
+                            <ns5:Size width="471" height="0"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:LaneAttributes roleId="AutomaticHandler"/>
+                        <ns5:FeatureSet/>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </lane>
+        </laneSet>
+        <subProcess triggeredByEvent="false" isForCompensation="false" name="Captación Embarazada" id="SUBPROCESS5000673085150">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:GraphicsAttributes>
+                        <ns5:Position x="292" y="106"/>
+                        <ns5:Size width="331" height="192"/>
+                    </ns5:GraphicsAttributes>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="true" name="collapsed"/>
+                        <ns5:BooleanFeature value="false" name="inputValidation"/>
+                        <ns5:BooleanFeature value="false" name="isDraft"/>
+                        <ns5:BooleanFeature value="false" name="outputValidation"/>
+                        <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns5:StringFeature value="Begin Level" name="level"/>
+                        <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns5:FeatureSet>
+                    <ns5:LogHandlers/>
+                </ns5:OracleExtensions>
+            </extensionElements>
+            <ioSpecification/>
+            <sendTask isForCompensation="false" name="InicioPA" id="ABSTRACT_ACTIVITY5000695677839">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="108" y="98"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="inputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                        <ns5:Conversational conversation="CONVERSATION50007111520">
+                            <ns5:ProcessCallConversationalDefinition targetConversational="START_EVENT500066765868"/>
+                        </ns5:Conversational>
+                        <ns5:LogHandlers/>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <ioSpecification/>
+            </sendTask>
+            <receiveTask instantiate="false" isForCompensation="false" name="FinPA" id="ABSTRACT_ACTIVITY5000707062560">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="199" y="100"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="outputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                        <ns5:Conversational conversation="CONVERSATION50007111520">
+                            <ns5:ProcessCallConversationalDefinition targetConversational="END_EVENT5000667658663"/>
+                        </ns5:Conversational>
+                        <ns5:LogHandlers/>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <ioSpecification/>
+            </receiveTask>
+            <startEvent isInterrupting="false" name="Start" id="START_EVENT5000673086777">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="34" y="100"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="outputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <outputSet/>
+            </startEvent>
+            <endEvent name="End" id="END_EVENT5000673086762">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="274" y="99"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="inputValidation"/>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <inputSet/>
+            </endEvent>
+            <sequenceFlow sourceRef="START_EVENT5000673086777" targetRef="ABSTRACT_ACTIVITY5000695677839" name="sf23" id="sf23">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes/>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                            <ns5:StringFeature value="STRAIGHT" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+            <sequenceFlow sourceRef="ABSTRACT_ACTIVITY5000695677839" targetRef="ABSTRACT_ACTIVITY5000707062560" name="sf25" id="sf25">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes/>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                            <ns5:StringFeature value="STRAIGHT" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+            <sequenceFlow sourceRef="ABSTRACT_ACTIVITY5000707062560" targetRef="END_EVENT5000673086762" name="sf26" id="sf26">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes/>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                            <ns5:StringFeature value="STRAIGHT" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+        </subProcess>
+        <subProcess triggeredByEvent="false" isForCompensation="false" name="Primera consulta en AP" id="SUBPROCESS5001645027060">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:GraphicsAttributes>
+                        <ns5:Position x="292" y="218"/>
+                        <ns5:Size width="340" height="200"/>
+                    </ns5:GraphicsAttributes>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="true" name="collapsed"/>
+                        <ns5:BooleanFeature value="false" name="inputValidation"/>
+                        <ns5:BooleanFeature value="false" name="isDraft"/>
+                        <ns5:BooleanFeature value="false" name="outputValidation"/>
+                        <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns5:StringFeature value="Begin Level" name="level"/>
+                        <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns5:FeatureSet>
+                    <ns5:LogHandlers/>
+                </ns5:OracleExtensions>
+            </extensionElements>
+            <ioSpecification/>
+            <sendTask isForCompensation="false" name="InicioPA" id="ABSTRACT_ACTIVITY5001672116954">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="110" y="100"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="inputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                        <ns5:Conversational conversation="CONVERSATION50016808671">
+                            <ns5:ProcessCallConversationalDefinition targetConversational="START_EVENT5001667970612"/>
+                        </ns5:Conversational>
+                        <ns5:LogHandlers/>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <ioSpecification>
+                    <dataInput name="primeraConsultaAPStartIN" id="primeraConsultaAPStartIN">
+                        <extensionElements>
+                            <ns5:OracleExtensions>
+                                <ns5:TypeRef namespace="http://xmlns.sacyl.es/hurh/bpmn/pca/embarazo" type="PrimeraConsultaAPStartType" isArray="false"/>
+                            </ns5:OracleExtensions>
+                        </extensionElements>
+                    </dataInput>
+                    <inputSet id="ABSTRACT_ACTIVITY5001672116954_uniqueInputSet">
+                        <dataInputRefs>primeraConsultaAPStartIN</dataInputRefs>
+                    </inputSet>
+                </ioSpecification>
+            </sendTask>
+            <receiveTask instantiate="false" isForCompensation="false" name="FinPA" id="ABSTRACT_ACTIVITY5001677989753">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="209" y="101"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="outputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                        <ns5:Conversational conversation="CONVERSATION50016808671">
+                            <ns5:ProcessCallConversationalDefinition targetConversational="END_EVENT5001667970724"/>
+                        </ns5:Conversational>
+                        <ns5:LogHandlers/>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <ioSpecification/>
+            </receiveTask>
+            <startEvent isInterrupting="false" name="Start" id="START_EVENT5001645326671">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="34" y="100"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="outputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <outputSet/>
+            </startEvent>
+            <endEvent name="End" id="END_EVENT5001645326775">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="304" y="102"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="inputValidation"/>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <inputSet/>
+            </endEvent>
+            <sequenceFlow sourceRef="START_EVENT5001645326671" targetRef="ABSTRACT_ACTIVITY5001672116954" name="sf42" id="sf42">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes/>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                            <ns5:StringFeature value="STRAIGHT" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+            <sequenceFlow sourceRef="ABSTRACT_ACTIVITY5001672116954" targetRef="ABSTRACT_ACTIVITY5001677989753" name="sf49" id="sf49">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes/>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                            <ns5:StringFeature value="STRAIGHT" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+            <sequenceFlow sourceRef="ABSTRACT_ACTIVITY5001677989753" targetRef="END_EVENT5001645326775" name="sf50" id="sf50">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes/>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                            <ns5:StringFeature value="STRAIGHT" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+        </subProcess>
+        <subProcess triggeredByEvent="false" isForCompensation="false" name="Analítica primer trimestre" id="SUBPROCESS5001819174431">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:GraphicsAttributes>
+                        <ns5:Position x="293" y="339"/>
+                        <ns5:Size width="354" height="194"/>
+                    </ns5:GraphicsAttributes>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="true" name="collapsed"/>
+                        <ns5:BooleanFeature value="false" name="inputValidation"/>
+                        <ns5:BooleanFeature value="false" name="isDraft"/>
+                        <ns5:BooleanFeature value="false" name="outputValidation"/>
+                        <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns5:StringFeature value="Begin Level" name="level"/>
+                        <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns5:FeatureSet>
+                    <ns5:LogHandlers/>
+                </ns5:OracleExtensions>
+            </extensionElements>
+            <ioSpecification/>
+            <sendTask isForCompensation="false" name="InicioPA" id="ABSTRACT_ACTIVITY5001831489214">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="119" y="105"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="inputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                        <ns5:Conversational conversation="CONVERSATION50018742391">
+                            <ns5:ProcessCallConversationalDefinition targetConversational="START_EVENT500182865719"/>
+                        </ns5:Conversational>
+                        <ns5:LogHandlers/>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <ioSpecification/>
+            </sendTask>
+            <receiveTask instantiate="false" isForCompensation="false" name="FinPA" id="ABSTRACT_ACTIVITY5001834260563">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="210" y="106"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="outputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                        <ns5:Conversational conversation="CONVERSATION50018742391">
+                            <ns5:ProcessCallConversationalDefinition targetConversational="END_EVENT5001828657288"/>
+                        </ns5:Conversational>
+                        <ns5:LogHandlers/>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <ioSpecification/>
+            </receiveTask>
+            <startEvent isInterrupting="false" name="Start" id="START_EVENT5001819295195">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="38" y="102"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:BooleanFeature value="false" name="outputValidation"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <outputSet/>
+            </startEvent>
+            <endEvent name="End" id="END_EVENT5001819295346">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:GraphicsAttributes>
+                            <ns5:Position x="300" y="107"/>
+                        </ns5:GraphicsAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="inputValidation"/>
+                            <ns5:BooleanFeature value="false" name="isDraft"/>
+                            <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                            <ns5:StringFeature value="Begin Level" name="level"/>
+                            <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+                <inputSet/>
+            </endEvent>
+            <sequenceFlow sourceRef="START_EVENT5001819295195" targetRef="ABSTRACT_ACTIVITY5001831489214" name="sf27" id="sf27">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes>
+                            <ns5:Positions x="72" y="102"/>
+                        </ns5:SequenceFlowAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="72,102" name="curve"/>
+                            <ns5:StringFeature value="ORTHOGONAL" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+            <sequenceFlow sourceRef="ABSTRACT_ACTIVITY5001831489214" targetRef="ABSTRACT_ACTIVITY5001834260563" name="sf32" id="sf32">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes>
+                            <ns5:Positions x="157" y="107"/>
+                        </ns5:SequenceFlowAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="157,107" name="curve"/>
+                            <ns5:StringFeature value="ORTHOGONAL" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+            <sequenceFlow sourceRef="ABSTRACT_ACTIVITY5001834260563" targetRef="END_EVENT5001819295346" name="sf33" id="sf33">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:SequenceFlowAttributes>
+                            <ns5:Positions x="253" y="110"/>
+                        </ns5:SequenceFlowAttributes>
+                        <ns5:FeatureSet>
+                            <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                            <ns5:StringFeature value="253,110" name="curve"/>
+                            <ns5:StringFeature value="ORTHOGONAL" name="routing"/>
+                        </ns5:FeatureSet>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </sequenceFlow>
+        </subProcess>
+        <startEvent isInterrupting="false" name="Start" id="START_EVENT5000367253525">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:GraphicsAttributes>
+                        <ns5:Position x="108" y="108"/>
+                    </ns5:GraphicsAttributes>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="false" name="catchAllErrors"/>
+                        <ns5:BooleanFeature value="false" name="catchAllSystemExceptions"/>
+                        <ns5:BooleanFeature value="false" name="isDraft"/>
+                        <ns5:BooleanFeature value="false" name="outputValidation"/>
+                        <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns5:StringFeature value="Begin Level" name="level"/>
+                        <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns5:FeatureSet>
+                    <ns5:Conversational conversation="CONVERSATION50003672537">
+                        <ns5:DefineInterfaceConversationalDefinition definedOperationName="start"/>
+                    </ns5:Conversational>
+                    <ns5:LogHandlers/>
+                </ns5:OracleExtensions>
+            </extensionElements>
+            <dataOutput name="embarazoNormalStartIN" id="embarazoNormalStartIN">
+                <extensionElements>
+                    <ns5:OracleExtensions>
+                        <ns5:TypeRef namespace="http://xmlns.sacyl.es/hurh/bpmn/pca/embarazo" type="EmbarazoNormalStartType" isArray="false"/>
+                    </ns5:OracleExtensions>
+                </extensionElements>
+            </dataOutput>
+            <dataOutputAssociation>
+                <extensionElements>
+                    <ns5:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>embarazoNormalStartIN</sourceRef>
+                <targetRef>cip</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns5:OracleExtensions>
+                            <ns5:DataAssignment operation="copy"/>
+                        </ns5:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://xmlns.sacyl.es/hurh/bpmn/pca/embarazo" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataOutput('embarazoNormalStartIN')/ns:cip
+                        <extensionElements>
+                            <ns5:OracleExtensions>
+                                <ns5:Expression mode="simple"/>
+                            </ns5:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('cip')
+                        <extensionElements>
+                            <ns5:OracleExtensions>
+                                <ns5:Expression mode="simple"/>
+                            </ns5:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataOutputAssociation>
+            <dataOutputAssociation>
+                <extensionElements>
+                    <ns5:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>embarazoNormalStartIN</sourceRef>
+                <targetRef>idPC</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns5:OracleExtensions>
+                            <ns5:DataAssignment operation="copy"/>
+                        </ns5:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://xmlns.sacyl.es/hurh/bpmn/pca/embarazo" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataOutput('embarazoNormalStartIN')/ns:idPC
+                        <extensionElements>
+                            <ns5:OracleExtensions>
+                                <ns5:Expression mode="simple"/>
+                            </ns5:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('idPC')
+                        <extensionElements>
+                            <ns5:OracleExtensions>
+                                <ns5:Expression mode="simple"/>
+                            </ns5:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataOutputAssociation>
+            <dataOutputAssociation>
+                <extensionElements>
+                    <ns5:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>embarazoNormalStartIN</sourceRef>
+                <targetRef>peticionario</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns5:OracleExtensions>
+                            <ns5:DataAssignment operation="copy"/>
+                        </ns5:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://xmlns.sacyl.es/hurh/bpmn/pca/embarazo" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataOutput('embarazoNormalStartIN')/ns:peticionario
+                        <extensionElements>
+                            <ns5:OracleExtensions>
+                                <ns5:Expression mode="simple"/>
+                            </ns5:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('peticionario')
+                        <extensionElements>
+                            <ns5:OracleExtensions>
+                                <ns5:Expression mode="simple"/>
+                            </ns5:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataOutputAssociation>
+            <outputSet id="START_EVENT5000367253525_uniqueOutputSet">
+                <dataOutputRefs>embarazoNormalStartIN</dataOutputRefs>
+            </outputSet>
+            <messageEventDefinition/>
+        </startEvent>
+        <endEvent name="End" id="END_EVENT5000367253659">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:GraphicsAttributes>
+                        <ns5:Position x="847" y="106"/>
+                    </ns5:GraphicsAttributes>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="false" name="catchAllErrors"/>
+                        <ns5:BooleanFeature value="false" name="catchAllSystemExceptions"/>
+                        <ns5:BooleanFeature value="false" name="inputValidation"/>
+                        <ns5:BooleanFeature value="false" name="isDraft"/>
+                        <ns5:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns5:StringFeature value="Begin Level" name="level"/>
+                        <ns5:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns5:FeatureSet>
+                    <ns5:Conversational conversation="CONVERSATION50003672537">
+                        <ns5:DefineInterfaceConversationalDefinition definedOperationName="end"/>
+                    </ns5:Conversational>
+                    <ns5:LogHandlers/>
+                </ns5:OracleExtensions>
+            </extensionElements>
+            <inputSet/>
+            <messageEventDefinition/>
+        </endEvent>
+        <sequenceFlow sourceRef="START_EVENT5000367253525" targetRef="SUBPROCESS5000673085150" name="sf7" id="sf7">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:SequenceFlowAttributes>
+                        <ns5:Positions x="126" y="106"/>
+                    </ns5:SequenceFlowAttributes>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns5:StringFeature value="126,106" name="curve"/>
+                        <ns5:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns5:FeatureSet>
+                </ns5:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="SUBPROCESS5000673085150" targetRef="SUBPROCESS5001645027060" name="sf24" id="sf24">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:SequenceFlowAttributes/>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns5:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                        <ns5:StringFeature value="STRAIGHT" name="routing"/>
+                    </ns5:FeatureSet>
+                </ns5:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="SUBPROCESS5001645027060" targetRef="SUBPROCESS5001819174431" name="sf26" id="sf26">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:SequenceFlowAttributes/>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns5:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                        <ns5:StringFeature value="STRAIGHT" name="routing"/>
+                    </ns5:FeatureSet>
+                </ns5:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="SUBPROCESS5001819174431" targetRef="END_EVENT5000367253659" name="sf35" id="sf35">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:SequenceFlowAttributes>
+                        <ns5:Positions x="452" y="358"/>
+                    </ns5:SequenceFlowAttributes>
+                    <ns5:FeatureSet>
+                        <ns5:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns5:StringFeature value="452,358" name="curve"/>
+                        <ns5:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns5:FeatureSet>
+                </ns5:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <dataObject name="cip" id="cip">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:DataObjectType initialize="true">
+                        <ns5:TypeRef namespace="http://www.w3.org/2001/XMLSchema" type="string" isArray="false"/>
+                    </ns5:DataObjectType>
+                </ns5:OracleExtensions>
+            </extensionElements>
+        </dataObject>
+        <dataObject name="idPC" id="idPC">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:DataObjectType initialize="true">
+                        <ns5:TypeRef namespace="http://www.w3.org/2001/XMLSchema" type="string" isArray="false"/>
+                    </ns5:DataObjectType>
+                </ns5:OracleExtensions>
+            </extensionElements>
+        </dataObject>
+        <dataObject name="peticionario" id="peticionario">
+            <extensionElements>
+                <ns5:OracleExtensions>
+                    <ns5:DataObjectType initialize="true">
+                        <ns5:TypeRef namespace="http://xmlns.sacyl.es/hurh/bpmn/general" type="PeticionarioType" isArray="false"/>
+                    </ns5:DataObjectType>
+                </ns5:OracleExtensions>
+            </extensionElements>
+        </dataObject>
+    </process>
+</definitions>
